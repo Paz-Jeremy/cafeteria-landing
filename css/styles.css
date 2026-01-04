@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Tenor+Sans&display=swap");
+
+:root {
+  /* Colores */
+  --first-color: #be9c79;
+  --title-color: #fff;
+  --text-color: #fff;
+  --text-color-light: #ffffffc5;
+
+  /* Fondo */
+  --bg-dark: #121212;
+
+  /*Letra */
+  --tittle-font: "Tenor Sans";
+  --paragraph-font: "Figtree";
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+}
+
+body {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background-repeat: no-repeat;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: #121212;
+}
+
+.site-header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.site-header .nav .logo {
+  font-family: var(--tittle-font);
+  font-size: var(--biggest-font-size);
+  color: var(--text-color-light);
+  transition: 0.3s ease-in-out;
+}
+
+.site-header .nav .logo:hover {
+  color: #fff;
+}
+
+.site-header .nav .nav-list {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.site-header .nav .nav-list li {
+  position: relative;
+  color: var(--title-color);
+  transition: 0.3s ease-in-out;
+}
+
+.site-header .nav .nav-list li::after {
+  content: "";
+  position: absolute;
+  background: var(--first-color);
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.site-header .nav .nav-list li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.site-header .nav .nav-list li a {
+  font-family: var(--paragraph-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  transition: 0.3s ease-in-out;
+}
+
+.site-header .nav .nav-list li a:hover {
+  color: #fff;
+}
