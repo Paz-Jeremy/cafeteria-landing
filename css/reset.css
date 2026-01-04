@@ -1,0 +1,35 @@
+/* reset.css */
+
+/* Elimina márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Quita estilos por defecto */
+body {
+  line-height: 1;
+}
+
+/* Quita viñetas */
+ol, ul {
+  list-style: none;
+}
+
+/* Quita subrayado azul */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imágenes responsivas */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Botones y inputs coherentes */
+button, input, textarea, select {
+  font: inherit;
+}
