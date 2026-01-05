@@ -12,7 +12,7 @@
   --bg-dark: #121212;
 
   /*Letra */
-  --tittle-font: "Tenor Sans";
+  ----title-font: "Tenor Sans";
   --paragraph-font: "Figtree";
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -30,6 +30,7 @@ body {
   font-size: var(--normal-font-size);
   color: var(--text-color);
   background-repeat: no-repeat;
+  font-family: var(--paragraph-font);
 }
 
 /* Header */
@@ -42,9 +43,11 @@ body {
 
 .site-header .nav {
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1.5rem 0;
 }
 
 .site-header .nav .logo {
@@ -96,4 +99,12 @@ body {
 
 .site-header .nav .nav-list li a:hover {
   color: #fff;
+}
+
+/* Responsive tablet */
+@media (min-width: 768px) {
+  .site-header .nav{
+    flex-direction: row;
+    padding: 1.5rem;
+  }
 }
