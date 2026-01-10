@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Tenor+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tenor+Sans&display=swap");
 
 :root {
   /* Colores */
@@ -111,11 +110,11 @@ body {
 /* ================= HERO ================= */
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100svh;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 3rem;
+  padding: 0 1.75rem;
   justify-content: center;
   align-items: center;
   row-gap: 30px;
@@ -178,6 +177,107 @@ body {
 .hero .hero-button:hover {
   background-color: var(--first-color);
   border: 1px solid var(--first-color);
+}
+
+/* ================= MENU ================= */
+.menu {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 1.75rem;
+  background: url(../img/background/fondo-menu.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu .title-menu {
+  color: #121212;
+  font-size: var(--h2-font-size);
+  font-family: var(--title-font);
+  margin-bottom: 1.75rem;
+}
+
+.menu .product-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(300px, 1fr);
+  gap: 1.75rem;
+}
+
+.menu .product-container .product-card {
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+
+.menu .product-container .product-card .product-imgs {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu .product-container .product-card .product-imgs .product-img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.menu .product-container .product-card .product-imgs .product-img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.menu .product-container .product-card:hover .product-imgs .product-img {
+  opacity: 0;
+}
+
+.menu .product-container .product-card:hover .product-imgs .product-img-hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.menu .product-container .product-card .product-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 15%;
+  padding: 0 1rem;
+  margin-top: 7px;
+  gap: 7px;
+}
+
+.menu .product-container .product-card .product-info .product-name {
+  color: #000000cf;
+  font-family: var(--paragraph-font);
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.menu .product-container .product-card .product-info .product-price {
+  color: #000000cf;
+  font-size: 12px;
+  font-family: "Inter";
+  font-weight: bold;
 }
 
 /* Breakpoint tablet */
