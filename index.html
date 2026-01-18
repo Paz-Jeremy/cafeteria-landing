@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -282,6 +282,110 @@
           </p>
           <a class="about-button" href="#">Leer más</a>
         </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="contact-content">
+          <h2 class="title-contact">¿Necesitas más información?</h2>
+          <img
+            class="title-separator-img"
+            src="img/separator/title-separator-white.png"
+            alt=""
+          />
+          <p class="contact-description">
+            Contáctanos por nuestros canales de atención, ¡Será un placer
+            atenderte!
+          </p>
+
+          <ul class="contact-list">
+            <li class="contact-list-item">
+              <img
+                class="contact-icon"
+                src="img/icons/email.svg"
+                alt="Ícono de email"
+              />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:tostaduria@cafesmo.com"
+                class="contact-link"
+                >tostaduria@cafesmo.com</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <img
+                class="contact-icon"
+                src="img/icons/phone.svg"
+                alt="Ícono de teléfono"
+              />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="tel:+50489078667"
+                class="contact-link"
+                >(+504) 8907-8667</a
+              >
+            </li>
+            <li class="contact-list-item">
+              <img
+                class="contact-icon"
+                src="img/icons/whatsapp.svg"
+                alt="Ícono de whatsapp"
+              />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/50489078667"
+                class="contact-link"
+                >Chat directo →</a
+              >
+            </li>
+          </ul>
+        </div>
+        <form class="contact-form" method="post" action="#">
+          <div class="inputs-fullName">
+            <div class="input-field">
+              <input
+                required
+                autocomplete="given-name"
+                type="text"
+                name="firstName"
+                id="username"
+              />
+              <label for="username">Nombre</label>
+            </div>
+            <div class="input-field">
+              <input
+                required
+                autocomplete="family-name"
+                type="text"
+                name="lastName"
+                id="userlastname"
+              />
+              <label for="userlastname">Apellido</label>
+            </div>
+          </div>
+          <div class="input-field">
+            <input
+              required
+              autocomplete="email"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field">
+            <textarea
+              id="message"
+              name="message"
+              required
+              autocomplete="off"
+              required
+            ></textarea>
+            <label for="message">Mensaje</label>
+          </div>
+          <button class="btn-contact">ENVIAR MENSAJE</button>
+        </form>
       </section>
     </main>
   </body>
