@@ -623,6 +623,74 @@ p {
   background-color: #262626;
 }
 
+/* ================= Footer ================= */
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2.5rem;
+}
+
+.footer .footer_copy {
+  text-align: center;
+  line-height: 1.2;
+  font-family: var(--paragraph-font);
+  font-weight: 100;
+}
+
+.footer .footer_copy small {
+  font-size: 0.938rem;
+}
+
+.footer .footer_copy small a {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer .footer_copy small a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-nav .footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer .footer-nav .footer-nav-list li {
+  text-align: center;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-family: var(--title-font);
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.footer .footer-nav .footer-nav-list li:hover {
+  color: var(--first-color);
+}
+
+.footer .footer_social {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer .footer_social .footer_social-link {
+  width: 35px;
+  height: 35px;
+}
+
+.footer .footer_social .footer_social-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Breakpoint tablet */
 @media (min-width: 768px) {
   .text-break {
@@ -684,12 +752,30 @@ p {
   .inputs-fullName .input-field {
     width: 50%;
   }
+
+  /* Footer */
+  .footer .footer-nav .footer-nav-list {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
 }
 
 /* Breakpoint desktop */
 @media (min-width: 1024px) {
+  /* ABOUT */
   .about {
     height: 100vh;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6rem 0;
+  }
+
+  .footer .footer_copy {
+    text-align: justify;
   }
 }
 
