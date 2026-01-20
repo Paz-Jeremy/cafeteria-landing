@@ -83,8 +83,8 @@ p {
   transition: 0.3s ease-in-out;
 }
 
-.site-header .nav .logo:hover {
-  color: #fff;
+.site-header .nav .logo img {
+  height: 45px;
 }
 
 .site-header .nav .nav-list {
@@ -522,7 +522,7 @@ p {
 }
 
 .contact .contact-content .contact-icon {
-  width: 30px;
+  font-size: 30px;
 }
 
 .contact .contact-content .contact-link {
@@ -680,9 +680,13 @@ p {
   gap: 1.25rem;
 }
 
-.footer .footer_social .footer_social-link {
-  width: 35px;
-  height: 35px;
+.footer .footer_social .footer_social-link .social-icon {
+  font-size: 35px;
+  transition: 0.3s ease-in-out;
+}
+
+.footer .footer_social .footer_social-link:hover .social-icon {
+  color: var(--first-color);
 }
 
 .footer .footer_social .footer_social-link img {
